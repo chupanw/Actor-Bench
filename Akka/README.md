@@ -4,7 +4,7 @@ Please install [sbt]("http://www.scala-sbt.org/0.13/docs/Setup.html"), [scala]("
 
 # Benchmarks #
 
-There are 7 benchmark programs. Descriptions of them could be found in the [Theater benchmark suite]("Theater/README.md")
+There are 7 benchmark programs. Descriptions of them could be found in the [Theater benchmark suite](Theater/README.md)
 
 To run Ring:
 
