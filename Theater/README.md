@@ -13,7 +13,7 @@ Right now there are 8 benchmark programs for Theater library.
 
 ## Ring ##
 
-	.build/debug/Ring <ring_size> <num_of_rounds>
+	.build/release/Ring <ring_size> <num_of_rounds>
 
 This benchmark creates a ring of actors, for example, a ring of size 3 would be
 A -> B -> C -> A. After ring creation, "A" sends `<num_of_round>` messages to
@@ -26,7 +26,7 @@ Purpose: throughput
 
 ## Ring2 ##
 
-	.build/debug/Ring2 <ring_size> <initial_message_value>
+	.build/release/Ring2 <ring_size> <initial_message_value>
 
 Similar to the Ring benchmark, Ring2 is also about passing messages in a ring
 of actors. This time, each message carries an integer. Upon receiving a
@@ -39,7 +39,7 @@ Purpose: scheduling of actors
 
 ## Fork ##
 
-	.build/debug/Fork <depth>
+	.build/release/Fork <depth>
 
 Starting from a root actor, each actor creates two child actors and form a
 binary tree. The `<depth>` parameter specifies the maximum depth of the tree.
@@ -48,7 +48,7 @@ Purpose: actor creation time
 
 ## TreeMsg ##
 
-	.build/debug/TreeMsg <depth> <num_msg>
+	.build/release/TreeMsg <depth> <num_msg>
 
 This benchmark creates an actor tree and then send messages from root to
 leaves. The tree creation process is the same as Fork. After actor tree is
@@ -60,7 +60,7 @@ Purpose: efficiency of actor lookup process
 
 ## Pipeline ##
 
-	./build/debug/Pipeline <num_request>
+	./build/release/Pipeline <num_request>
 
 This benchmark simulates a 3-stage message processing pipeline. The pipeline
 looks like this: downloader -> indexer -> writer. In the beginning,
@@ -73,7 +73,7 @@ Purpose: throughput of stateless actors
 
 ## Chameneos ##
 
-	./build/debug/Chameneos <num_cham> <num_host>
+	./build/release/Chameneos <num_cham> <num_host>
 
 There are two kinds of actor, one is called Mall, and the other is called
 Chameneos. There is only one Mall actor, but there could be multiple Chameneos
@@ -93,7 +93,7 @@ Purpose: throughput of stateful actors
 
 ## Calculator ##
 
-	./build/debug/Calculator <num_expressions> <num_operators> <num_workers>
+	./build/release/Calculator <num_expressions> <num_operators> <num_workers>
 
 A Master actor accepts `<num_expressions>` requests and forward them to its
 workers randomly. The number of workers is specified by `<num_workers>`. When a
